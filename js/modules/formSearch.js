@@ -14,7 +14,7 @@ export const search = () => {
 
 
   const loadSearch = async value => {
-    const data = await getData(`https://newsapi.org/v2/everything?q=${value}&pageSize=100`);
+    const data = await getData(`https://newsapi.org/v2/everything?q=${value}&pageSize=8`);
     const quantity = data.articles.length;
 
     title.classList.remove('hide');

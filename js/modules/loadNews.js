@@ -8,14 +8,15 @@ export const loadNews = async () => {
   newsList.innerHTML = `<li class="preload"></li>`;
 
   const title = document.querySelector('.title');
+  title.innerHTML = `Список новостей`;
+  // title.classList.add('hide');
 
   const country = localStorage.getItem('country') || 'ru';
   choices.setChoiceByValue(country);
   newsList.textContent = '';
 
-  title.classList.add('hide');
 
-  const data = await getData(`https://newsapi.org/v2/top-headlines?country=${country}&pageSize=100`);
+  const data = await getData(`https://newsapi.org/v2/top-headlines?country=${country}&pageSize=8`);
   // const data = await getData('../../headlines.json');
   renderCard(data);
 };
