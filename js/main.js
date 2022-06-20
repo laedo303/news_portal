@@ -1,9 +1,9 @@
-import {search} from './modules/formSearch.js';
+import {searchNews} from './modules/formSearch.js';
 import {loadNews} from './modules/loadNews.js';
 
 const init = () => {
   loadNews();
-  search();
+  searchNews();
 };
 
 init();
