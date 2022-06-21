@@ -1,11 +1,9 @@
 import {getDateCorrectFormat} from './getDateCorrectFormat.js';
 import {getImage} from './getImage.js';
 
+const newsList = document.querySelector('.news-list');
 
-export const renderCard = (data) => {
-  const newsList = document.querySelector('.news-list');
-  newsList.textContent = '';
-
+export const renderCard = async (data) => {
   data.articles.forEach(async (item) => {
     const {urlToImage, title, url, description, publishedAt, author} = item;
 
